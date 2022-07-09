@@ -15,40 +15,26 @@ public class NonTakenItem : MonoBehaviour
     {   
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (inventory.isDown)
+        if(Input.GetKeyDown(KeyCode.E))
         {
-            inventory.MakeUp();
-        }
-        for (int i = 0; i < inventory.inventaryItems.Length; i++)
-        {
-            Debug.Log(sprite.name);
-            if (inventory.inventaryItems[i].sprite == sprite)
+            if (inventory.isDown)
             {
-                bool isActive = inventory.inventaryItems[i].gameObject.activeSelf;
-                inventory.inventaryItems[i].gameObject.SetActive(!isActive);
+                inventory.MakeUp();
             }
+            for (int i = 0; i < inventory.inventaryItems.Length; i++)
+            {
+                Debug.Log(sprite.name);
+                if (inventory.inventaryItems[i].sprite.name == sprite.name)
+                {
+                    inventory.inventaryItems[i].IsTaken = true;
+                    bool isActive = inventory.inventaryItems[i].gameObject.activeSelf;
+                    inventory.inventaryItems[i].gameObject.SetActive(!isActive);
+                }
+            }
+            gameObject.SetActive(false);
         }
-        gameObject.SetActive(false);
     }
 
-    private void OnMouseDown()
-    {
-        if (inventory.isDown)
-        {
-            inventory.MakeUp();
-        }
-        for (int i = 0; i < inventory.inventaryItems.Length; i++)
-        {
-            Debug.Log(sprite.name);
-            if (inventory.inventaryItems[i].sprite.name == sprite.name)
-            {
-                inventory.inventaryItems[i].IsTaken = true;
-                bool isActive = inventory.inventaryItems[i].gameObject.activeSelf;
-                inventory.inventaryItems[i].gameObject.SetActive(!isActive);
-            }
-        }
-        gameObject.SetActive(false);
-    }
 }
