@@ -19,6 +19,7 @@ public class NonTakenItem : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("Pressed");
             if (inventory.isDown)
             {
                 inventory.MakeUp();
