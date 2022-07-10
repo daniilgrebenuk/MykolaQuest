@@ -41,21 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: background
+  - name: GameLock
     uniqueID: 2352236901
     locked: 0
-  - name: nps
+  - name: KnopkaTitle
     uniqueID: 2956191313
-    locked: 0
-  - name: items
-    uniqueID: 1185426985
-    locked: 0
-  - name: inventory
-    uniqueID: 437252113
-    locked: 0
-  - name: trigger
-    uniqueID: 1440758041
-    locked: 0
-  - name: dialogue
-    uniqueID: 300492129
     locked: 0
