@@ -47,3 +47,9 @@ TagManager:
   - name: KnopkaTitle
     uniqueID: 2956191313
     locked: 0
+  - name: people
+    uniqueID: 2280210131
+    locked: 0
+  - name: gg
+    uniqueID: 2268292505
+    locked: 0
