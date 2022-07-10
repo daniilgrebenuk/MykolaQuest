@@ -44,6 +44,7 @@ public class TikTakToe : MonoBehaviour
         {
             win.picture.SetActive(true);
             win.code.SetActive(true);
+            win.useCode.SetActive(true);
             wasCombination = true;
         } else if(isOver())
         {

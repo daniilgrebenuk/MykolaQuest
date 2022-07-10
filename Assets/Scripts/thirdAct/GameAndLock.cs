@@ -9,16 +9,11 @@ public class GameAndLock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        tikTakToe.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(tikTakToe.win.picture.activeSelf || tikTakToe.lose.picture.activeSelf || tikTakToe.draw.picture.activeSelf)
-        {
-            tikTakToe.gameObject.SetActive(false);
-            LockClicking.gameObject.SetActive(true);
-        }
     }
 }
