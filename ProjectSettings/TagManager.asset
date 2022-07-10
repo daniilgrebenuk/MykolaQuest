@@ -53,3 +53,6 @@ TagManager:
   - name: gg
     uniqueID: 2268292505
     locked: 0
+  - name: dialogue
+    uniqueID: 2738457781
+    locked: 0
